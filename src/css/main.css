@@ -1,0 +1,164 @@
+.main-bg {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-bg);
+}
+
+.main-bg h1 {
+  font-size: 5rem;
+  margin-bottom: 12px;
+  color: var(--color-font-2);
+}
+
+.title-container {
+  width: 80%;
+}
+
+
+.main-bg h1::after {
+  overflow: hidden;
+  display: inline-flex;
+  position: absolute;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 1.5s infinite;
+  content: "\2026";
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: .85em;
+  }
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: .2fr 2fr 1fr;
+  width: 80%;
+  height: 60%;
+  max-width: 1200px;
+  background-color: var(--color-bg-2);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.24);
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
+  width: 64px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1366px) {
+  .title-container {
+    width: 70%;
+  }
+
+  .main-container {
+    width: 70%;
+  }
+
+  .main-bg h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1260px) {
+  .main-bg h1 {
+    font-size: 3rem;
+  }
+
+  .main-container {
+    grid-template-columns: .2fr 1.7fr 1.3fr;
+  }
+}
+
+@media (max-width:1100px) {
+  .main-bg h1 {
+    font-size: 2.7rem;
+  }
+
+  .title-container {
+    width: 70%;
+  }
+
+  .logos {
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr 1fr 1fr;
+    height: 80%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .main-bg h1 {
+    font-size: 2.3rem;
+  }
+
+  .title-container {
+    width: 70%;
+  }
+
+  .main-container {
+    grid-template-rows: .2fr 1fr 1fr;
+    height: 80%;
+  }
+}
+
+@media (max-width: 635px) {
+  .main-bg h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 411px) {
+  .main-bg h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    width: 90%;
+  }
+
+  img {
+    width: 40px;
+  }
+
+  .logos {
+    gap: 0;
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-container {
+    height: 100%;
+  }
+}

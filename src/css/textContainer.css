@@ -1,0 +1,147 @@
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  padding: 0;
+  width: 100%;
+  height: 85%;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: var(--color-bg-2);
+  color: var(--color-font-1);
+  border-radius: 12px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  color: var(--color-font-1);
+}
+
+.text-box p {
+  align-self: flex-start;
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-font-5);
+}
+
+.buttons-container {
+  display: flex;
+  gap: 20px;
+}
+
+.encrypt-button,
+.decrypt-button {
+  background: var(--color-font-4);
+  color: var(--color-font-3);
+  border: 2px solid var(--color-font-3);
+  padding: 12px;
+  border-radius: 20px;
+  width: 200px;
+  font-size: 1.125rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s;
+}
+
+
+.encrypt-button:hover,
+.decrypt-button:hover {
+  background: linear-gradient(90deg, var(--color-btn-1), var(--color-btn-2));
+  color: var(--color-font-4);
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1260px) {
+  textarea {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+}
+
+@media (max-width: 1100px) {
+  textarea {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-box {
+    padding: 0 20px;
+  }
+
+  textarea {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 635px) {
+  .text-box {
+    width: 80%;
+  }
+
+  .text-box p {
+    font-size: 0.75rem;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 5px
+  }
+
+  .encrypt-button,
+  .decrypt-button {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .text-box {
+    width: 80%;
+  }
+}
+
+@media (max-width:411px) {
+  .text-box {
+    flex-direction: column;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .encrypt-button,
+  .decrypt-button {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+}
